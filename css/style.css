@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Recursive', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to left bottom,#f9f227be,#fd532dbb),url('../img/video.jpg');
+    background-position: center center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+    position: relative;
+}
+.logo-icon{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+.logo{
+    height: 35px;
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 40px;
+    font-weight: 400;
+    /* llamo a la animacion */
+    animation-name: moveLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    animation-name: moveRight;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+
+}
+@media screen and (min-width:680px) {
+    .heading-primary-main{
+        font-size: 60px;
+        letter-spacing: 25px;
+    }
+    .heading-primary-sub{
+        letter-spacing: 24.5px;
+    }
+    
+}
+@keyframes moveLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px) rotate(180deg);
+    }
+    60%{
+        transform: rotate(120deg);
+    }
+    80%{
+        transform: translateX(19px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    80%{
+        transform: translateY(-19px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
