@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+html{
+	font-size: 62.5%; /* Reset para REM */
+	/* 62.5 = 10px de 16px */
+}
 body{
     font-family: 'Recursive', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
 }
@@ -21,11 +24,11 @@ body{
 }
 .logo-icon{
     position: absolute;
-    top: 20px;
-    left: 40px;
+    top: 2rem;
+    left: 2rem;
 }
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
 .text-box{
     position: absolute;
@@ -38,11 +41,11 @@ body{
     color: #fff;
     text-transform: uppercase;
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 .heading-primary-main{
     display: block;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: 400;
     /* llamo a la animacion */
     animation-name: moveLeft;
@@ -51,7 +54,7 @@ body{
 }
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     animation-name: moveRight;
     animation-duration: 5s;
@@ -60,8 +63,8 @@ body{
 }
 @media screen and (min-width:680px) {
     .heading-primary-main{
-        font-size: 60px;
-        letter-spacing: 25px;
+        font-size: 6rem;
+        letter-spacing: 2.5rem;
     }
     .heading-primary-sub{
         letter-spacing: 24.5px;
@@ -122,7 +125,7 @@ body{
 .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
     border-radius:100px;
     transition: all .2s;
